@@ -1,0 +1,6 @@
+{
+  "name": "Lobo & Soberana — Advocacia Estratégica",
+  "description": "Escritório institucional de advocacia empresarial, contencioso estratégico, penal econômico e proteção patrimonial, com portal interativo de comunicação, envio de documentos e pagamentos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

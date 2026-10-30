@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-obsidian: #000000;
+  --color-obsidian-soft: #090806;
+  --color-obsidian-card: #110E09;
+  --color-gold-light: #F3D88B;
+  --color-gold-primary: #D4AF37;
+  --color-gold-deep: #9E7724;
+  --color-gold-border: #2C2314;
+  --color-ivory: #F5EFE6;
+  --color-parchment: #BFB39C;
+  --color-muted-bronze: #8C7E65;
+}
+
+@layer base {
+  html {
+    background-color: #000000;
+    color: #F5EFE6;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-gold-metallic {
+  background-image: linear-gradient(180deg, #FFF1BE 0%, #D9B14B 48%, #8F651D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.divider-gold-metallic {
+  background-image: linear-gradient(
+    90deg,
+    rgba(143, 101, 29, 0.15) 0%,
+    #F3D88B 50%,
+    rgba(143, 101, 29, 0.15) 100%
+  );
+}
+
+.coin-stage {
+  perspective: 1200px;
+}
+
+.coin-rotor {
+  transform-style: preserve-3d;
+  transform: rotateY(var(--coin-angle, 0deg));
+  will-change: transform;
+}
+
+.coin-face-front {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.coin-face-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
